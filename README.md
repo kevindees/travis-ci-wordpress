@@ -17,7 +17,7 @@ When you push to GitHub with Travis CI integrated your Tests in the `tests` fold
 Here is the Travis CI documentation you will care most about:
 - [PHP](https://docs.travis-ci.com/user/languages/php/)
 - [MySQL](https://docs.travis-ci.com/user/database-setup/#MySQL)
-- [Default Environment Variables](https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables) `TRAVIS_PHP_VERSION`
+- [Default Environment Variables](https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables)
 - [Speed Up Tests](https://docs.travis-ci.com/user/speeding-up-the-build/#PHP-optimisations)
 - [Complex Builds Using .sh Scripts](https://docs.travis-ci.com/user/customizing-the-build#Implementing-Complex-Build-Steps)
 
