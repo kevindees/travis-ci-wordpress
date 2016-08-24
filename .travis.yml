@@ -9,8 +9,8 @@ services:
 
 before_script:
  - composer self-update
- - chmod ugo+x travis.sh
- - ./travis.sh $(phpenv version-name) $(pwd)
+ - chmod ugo+x bin/travis.sh
+ - ./bin/travis.sh $(phpenv version-name) $(pwd)
 
 install:
  - travis_retry composer install --no-interaction --prefer-source --dev
