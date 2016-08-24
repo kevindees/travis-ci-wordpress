@@ -1,6 +1,6 @@
 # Travis CI and WordPress Integration for Composer Packages
 
-Travis CI WordPress configuration and setup for PHP 5.6 and 5.5 for composer and PHP Unit tests. 
+Travis CI WordPress configuration and setup for PHP 5.6 and 5.5 for composer and PHP Unit tests. Read more about [Continuous Integration from Martin Fowler](http://martinfowler.com/articles/continuousIntegration.html). 
 
 - With this setup WordPress is fully loaded and run before tests are run. 
 - Any WordPress hooks will not be implemeneted - like `add_action` and `add_filter`. You can configure it to be otherwise but for my needs I have not (no instructions for this).
