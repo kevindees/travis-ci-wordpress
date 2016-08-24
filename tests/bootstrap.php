@@ -1,6 +1,7 @@
 <?php
 require __DIR__.'/../vendor/autoload.php';
 date_default_timezone_set('UTC');
+
 $wp_load = __DIR__.'/../wordpress/wp-load.php';
 define('BASE_WP', $wp_load);
 if( ! file_exists($wp_load) ) {
