@@ -15,9 +15,7 @@ Simply use this project as your base configuration and you are ready to go. Othe
 When you push to GitHub with Travis CI integrated your Tests in the `tests` folder will be run as expected.
 
 ## Local Tests
-When doing local tests I use [Laravel Homestead](https://github.com/laravel/homestead) `vagrant box add laravel/homestead`.
-
-Then from the project direcroty like `~/Code/project` I run a few command on the VM to download and install WordPress:
+When doing local tests I use [Laravel Homestead](https://github.com/laravel/homestead) `vagrant box add laravel/homestead`. Then from the project direcroty like `~/Code/project` I run a few command on the VM to download and install WordPress. Finall I use [PHPStorm](https://www.jetbrains.com/phpstorm/) to [run tests with coverage](https://www.jetbrains.com/help/phpstorm/2016.1/running-with-coverage.html).
 
 ### Database
 Create the `wordpress` Database:
