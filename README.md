@@ -58,5 +58,7 @@ if( isset($_SERVER['SERVER_NAME']) ) {
 }
 ```
 
+If you are running tests from the guest machine, Homestead, you do not need to do this.
+
 # Circle CI
 If you need help with Circle CI this is a greate resource http://blog.wppusher.com/continuous-integration-with-wordpress-and-circleci/
