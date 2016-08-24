@@ -57,7 +57,7 @@ If you are running tests form the host computer then be sure to edit the `wp-con
 if( isset($_SERVER['SERVER_NAME']) ) {
     define('DB_HOST', '127.0.0.1');
 } else {
-    define('DB_HOST', '127.0.0.1:33060'); // Port forwarded by Homestead by default
+    define('DB_HOST', '127.0.0.1:33060'); // Default port forwarded by Homestead
 }
 ```
 
