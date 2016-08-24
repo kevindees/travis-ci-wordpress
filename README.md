@@ -2,13 +2,15 @@
 
 Travis CI WordPress Configuration and Setup for PHP 5.6 and 5.5. With this setup WordPress is fully loaded and run before tests are run. Any WordPress hooks will not be implemeneted - like `add_action` and `add_filter`. You can configure it to be otherwise but for my needs I have not.
 
-Also, note that this configuration is only setup for [composer](https://getcomposer.org/) projects ([using composer](https://getcomposer.org/doc/01-basic-usage.md)). Edit the `composer.json` to your specification and needs.
+Note that this configuration is only setup for [composer](https://getcomposer.org/) package projects ([using composer](https://getcomposer.org/doc/01-basic-usage.md)). Edit the `composer.json` to your specification and needs.
+
+This setup defaults  to [PHP Unit 4.8](https://phpunit.de/manual/4.8/en/writing-tests-for-phpunit.html) because we want compatability with PHP 5.5.9. If you do not have these requirements update the `composer.json` file accordingly.
 
 ## Travis CI Tests
 
 Simply use this project as your base configuration and you are ready to go. Otherwise, copy the files and configurations you need. 
 
-When you push to GitHub with Travis CI integrated yout tests in the tests folder will be run as expected.
+When you push to GitHub with Travis CI integrated your Tests in the `tests` folder will be run as expected.
 
 ## Local Tests
 When doing local tests I use [Laravel Homestead](https://github.com/laravel/homestead) `vagrant box add laravel/homestead`.
