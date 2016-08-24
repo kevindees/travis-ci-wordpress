@@ -6,12 +6,14 @@ When doing local tests I use [Laravel Homestead](https://github.com/laravel/home
 
 Then from the project direcroty like `~/Code/project` I run a few command on the VM to download and install WordPress:
 
+### Database
 Create the `wordpress` Database:
 
 ```
 mysql -e "SET NAMES utf8; create database IF NOT EXISTS wordpress;" -uroot
 ```
 
+### Download WordPress
 Download and install WordPress with `wp-cli.phar`:
 
 ```sh
@@ -22,14 +24,29 @@ chmod +x wp-cli.phar
 ./wp-cli.phar core install --allow-root --admin_name=admin --admin_password=admin --admin_email=admin@example.com --url=http://127.0.0.1 --title=WordPress --path=wordpress
 ```
 
+### Configure Homestead
 In the `Homestead.yaml` file I add the wordpress site:
 
-```
+```yaml
 sites:
   - map: tests.wp
     to: /home/vagrant/Code/project/wordpress
 ```
 
+### Update hosts file
+In the host computers `hosts` file I point `tests.wp` to the Homestead IP. Im my `Homestead.yaml` file it is:
+
+```yaml
+ip: "192.168.10.10"
+```
+
+So, in my `hosts` file on my Mac using [Hostbuddy](https://clickontyler.com/hostbuddy/) I add a new host and flush the DNS cache on my machine:
+
+```
+192.168.10.10 tests.wp
+```
+
+### Update WP Config
 If you are running tests form the host computer then be sure to edit the `wp-config.php` file to that configuration. Here is what I do because the MySQL port is forwarded on the host computer:
 
 ```
@@ -41,5 +58,5 @@ if( isset($_SERVER['SERVER_NAME']) ) {
 }
 ```
 
-## Circle CI
+# Circle CI
 If you need help with Circle CI this is a greate resource http://blog.wppusher.com/continuous-integration-with-wordpress-and-circleci/
