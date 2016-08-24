@@ -19,7 +19,7 @@ Here is the Travis CI documentation you will care most about:
 - [Including MySQL](https://docs.travis-ci.com/user/database-setup/#MySQL)
 - [Default Environment Variables](https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables)
 - [Speed Up Tests](https://docs.travis-ci.com/user/speeding-up-the-build/#PHP-optimisations)
-- [Complex Builds](https://docs.travis-ci.com/user/customizing-the-build#Implementing-Complex-Build-Steps) (don't set `script: ./scripts/run-tests.sh` like in the docs this will bypass the phpunit.xml file and test nothing - only do this if you are sure it is what you want. You will want to use .sh files for provisioning)
+- [Complex Builds](https://docs.travis-ci.com/user/customizing-the-build#Implementing-Complex-Build-Steps) (don't set `script: ./scripts/run-tests.sh` like in the docs. That will bypass the phpunit.xml file and test nothing - only do this if you are sure it is what you want. You will want to use .sh files for provisioning)
 
 ## Local Tests
 When doing local tests I use [Laravel Homestead](https://github.com/laravel/homestead) `vagrant box add laravel/homestead`. Then from the project direcroty like `~/Code/project` I run a few command on the VM to download and install WordPress. Finall I use [PHPStorm](https://www.jetbrains.com/phpstorm/) to [run tests with coverage](https://www.jetbrains.com/help/phpstorm/2016.1/running-with-coverage.html).
