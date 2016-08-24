@@ -1,6 +1,6 @@
 # Travis CI and WordPress Integration for Composer Packages
 
-Travis CI WordPress configuration and setup for PHP 5.6 and 5.5 for composer and PHP Unit tests. Read more about [Continuous Integration from Martin Fowler](http://martinfowler.com/articles/continuousIntegration.html). 
+[Travis CI](https://travis-ci.org/) WordPress configuration and setup for PHP 5.6 and 5.5 for composer and PHP Unit tests. Read more about [Continuous Integration from Martin Fowler](http://martinfowler.com/articles/continuousIntegration.html). 
 
 - With this setup WordPress is fully loaded and run before tests are run. 
 - Any WordPress hooks will not be implemeneted - like `add_action` and `add_filter`. You can configure it to be otherwise but for my needs I have not (no instructions for this).
@@ -13,6 +13,13 @@ Composer's default is [PHP Unit 4.8](https://phpunit.de/manual/4.8/en/writing-te
 Simply use this project as your base configuration and you are ready to go. Otherwise, copy the files and configurations you need. 
 
 When you push to GitHub with Travis CI integrated your Tests in the `tests` folder will be run as expected.
+
+Here is the Travis CI documentation you will care most about:
+- [PHP](https://docs.travis-ci.com/user/languages/php/)
+- [MySQL](https://docs.travis-ci.com/user/database-setup/#MySQL)
+- [Default Environment Variables](https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables) `TRAVIS_PHP_VERSION`
+- [Speed Up Tests](https://docs.travis-ci.com/user/speeding-up-the-build/#PHP-optimisations)
+- [Complex Builds Using .sh Scripts](https://docs.travis-ci.com/user/customizing-the-build#Implementing-Complex-Build-Steps)
 
 ## Local Tests
 When doing local tests I use [Laravel Homestead](https://github.com/laravel/homestead) `vagrant box add laravel/homestead`. Then from the project direcroty like `~/Code/project` I run a few command on the VM to download and install WordPress. Finall I use [PHPStorm](https://www.jetbrains.com/phpstorm/) to [run tests with coverage](https://www.jetbrains.com/help/phpstorm/2016.1/running-with-coverage.html).
