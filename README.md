@@ -1,6 +1,6 @@
 # Travis CI and WordPress Integration
 
-Travis CI WordPress Configuration and Setup for PHP 5.6 and 5.5. With this setup WordPress is fully loaded and run before tests are run. Any WordPress hooks will not be implemeneted - like `add_action` and `add_filter`. You can configure it to be other wise but for my needs I have not.
+Travis CI WordPress Configuration and Setup for PHP 5.6 and 5.5. With this setup WordPress is fully loaded and run before tests are run. Any WordPress hooks will not be implemeneted - like `add_action` and `add_filter`. You can configure it to be otherwise but for my needs I have not.
 
 Also, note that this configuration is only setup for [composer](https://getcomposer.org/) projects ([using composer](https://getcomposer.org/doc/01-basic-usage.md)). Edit the `composer.json` to your specification and needs.
 
