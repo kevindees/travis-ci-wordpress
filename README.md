@@ -24,8 +24,10 @@ Here is the Travis CI documentation you will care most about:
 ## Local Tests
 When doing local tests I use [Laravel Homestead](https://github.com/laravel/homestead) `vagrant box add laravel/homestead`. Then from the project direcroty like `~/Code/project` I run a few command on the VM to download and install WordPress. Finall I use [PHPStorm](https://www.jetbrains.com/phpstorm/) to [run tests with coverage](https://www.jetbrains.com/help/phpstorm/2016.1/running-with-coverage.html).
 
+![PHP Storm Example](https://s3-us-west-2.amazonaws.com/kevindees-github-readme/example-tests.png)
+
 ### Database
-Create the `wordpress` Database:
+Create the `wordpress` database on the guest machine Homestead:
 
 ```bash
 mysql -e "SET NAMES utf8; create database IF NOT EXISTS wordpress;" -uroot
