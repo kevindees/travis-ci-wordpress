@@ -45,14 +45,14 @@ ip: "192.168.10.10"
 
 So, in my `hosts` file on my Mac using [Hostbuddy](https://clickontyler.com/hostbuddy/) I add a new host and flush the DNS cache on my machine:
 
-```
+```hosts
 192.168.10.10 tests.wp
 ```
 
 ### Update WP Config
 If you are running tests form the host computer then be sure to edit the `wp-config.php` file to that configuration. Here is what I do because the MySQL port is forwarded on the host computer:
 
-```
+```php
 /** MySQL hostname */
 if( isset($_SERVER['SERVER_NAME']) ) {
     define('DB_HOST', '127.0.0.1');
