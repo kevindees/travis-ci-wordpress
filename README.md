@@ -12,14 +12,14 @@ Then from the project direcroty like `~/Code/project` I run a few command on the
 ### Database
 Create the `wordpress` Database:
 
-```shell
+```bash
 mysql -e "SET NAMES utf8; create database IF NOT EXISTS wordpress;" -uroot
 ```
 
 ### Download WordPress
 Download and install WordPress with `wp-cli.phar`:
 
-```shell
+```bash
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 chmod +x wp-cli.phar
 ./wp-cli.phar core download --allow-root --path=wordpress
