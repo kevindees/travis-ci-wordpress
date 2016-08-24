@@ -4,6 +4,12 @@ Travis CI WordPress Configuration and Setup for PHP 5.6 and 5.5. With this setup
 
 Also, note that this configuration is only setup for [composer](https://getcomposer.org/) projects ([using composer](https://getcomposer.org/doc/01-basic-usage.md)). Edit the `composer.json` to your specification and needs.
 
+## Travis CI Tests
+
+Simply use this project as your base configuration and you are ready to go. Otherwise, copy the files and configurations you need. 
+
+When you push to GitHub with Travis CI integrated yout tests in the tests folder will be run as expected.
+
 ## Local Tests
 When doing local tests I use [Laravel Homestead](https://github.com/laravel/homestead) `vagrant box add laravel/homestead`.
 
