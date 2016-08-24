@@ -54,7 +54,7 @@ sites:
 ```
 
 ### Update hosts file
-In the host computers `hosts` file I point `tests.wp` to the Homestead IP. Im my `Homestead.yaml` file it is:
+In the host computers `hosts` file I point `tests.wp` to the Homestead IP. In my `Homestead.yaml` file it is:
 
 ```yaml
 ip: "192.168.10.10"
