@@ -3,7 +3,7 @@
 Travis CI WordPress configuration and setup for PHP 5.6 and 5.5 for composer and PHP Unit tests. 
 
 - With this setup WordPress is fully loaded and run before tests are run. 
-- Any WordPress hooks will not be implemeneted - like `add_action` and `add_filter`. You can configure it to be otherwise but for my needs I have not.
+- Any WordPress hooks will not be implemeneted - like `add_action` and `add_filter`. You can configure it to be otherwise but for my needs I have not (no instructions for this).
 - This configuration is only setup for [composer](https://getcomposer.org/) package projects ([using composer](https://getcomposer.org/doc/01-basic-usage.md)). Edit the `composer.json` to your specification and needs.
 
 Composer's default is [PHP Unit 4.8](https://phpunit.de/manual/4.8/en/writing-tests-for-phpunit.html) because I need compatability with PHP 5.5.9. If you do not have these requirements update the `composer.json` file accordingly.
