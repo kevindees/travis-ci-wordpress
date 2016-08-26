@@ -2,15 +2,15 @@
 
 [Travis CI](https://travis-ci.org/) WordPress configuration and setup for PHP 5.6 and 5.5 for composer and PHP Unit tests. Read more about [Continuous Integration from Martin Fowler](http://martinfowler.com/articles/continuousIntegration.html). 
 
-- With this setup WordPress is fully loaded and run before tests are run. 
-- Any WordPress hooks will not be implemeneted - like `add_action` and `add_filter`. You can configure it to be otherwise but for my needs I have not (no instructions for this).
+- With this setup, WordPress is fully loaded before tests are run. 
+- Any WordPress hooks will not be implemented - like `add_action` and `add_filter`. You can configure it to be otherwise but for my needs, I have not (no instructions for this).
 - This configuration is only setup for [composer](https://getcomposer.org/) package projects ([using composer](https://getcomposer.org/doc/01-basic-usage.md)). Edit the `composer.json` to your specification and needs.
 
-Composer's default is [PHP Unit 4.8](https://phpunit.de/manual/4.8/en/writing-tests-for-phpunit.html) because I need compatability with PHP 5.5.9. If you do not have these requirements update the `composer.json` file accordingly.
+Composer's default is [PHP Unit 4.8](https://phpunit.de/manual/4.8/en/writing-tests-for-phpunit.html) because I need compatibility with PHP 5.5.9. If you do not have these requirements update the `composer.json` file accordingly.
 
 ## Travis CI Tests
 
-Simply use this project as your base configuration and you are ready to go. Otherwise, copy the files and configurations you need. 
+Use this project as your base configuration and you are ready to go. Otherwise, copy the files and settings you need. 
 
 When you push to GitHub with Travis CI integrated your Tests in the `tests` folder will be run as expected.
 
@@ -19,10 +19,10 @@ Here is the Travis CI documentation you will care most about:
 - [Including MySQL](https://docs.travis-ci.com/user/database-setup/#MySQL)
 - [Default Environment Variables](https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables)
 - [Speed Up Tests](https://docs.travis-ci.com/user/speeding-up-the-build/#PHP-optimisations)
-- [Complex Builds](https://docs.travis-ci.com/user/customizing-the-build#Implementing-Complex-Build-Steps) (don't set `script: ./scripts/run-tests.sh` like in the docs. That will bypass the phpunit.xml file and test nothing - only do this if you are sure it is what you want. You will want to use .sh files for provisioning)
+- [Complex Builds](https://docs.travis-ci.com/user/customizing-the-build#Implementing-Complex-Build-Steps) (don't set `script: ./scripts/run-tests.sh` like in the docs. That will bypass the `phpunit.xml` file and test nothing - only do this if you are sure it is what you want. You will want to use .sh files for provisioning)
 
 ## Local Tests
-When doing local tests I use [Laravel Homestead](https://github.com/laravel/homestead) `vagrant box add laravel/homestead`. Then from the project direcroty like `~/Code/project` I run a few command on the VM to download and install WordPress. Finally I use [PHPStorm](https://www.jetbrains.com/phpstorm/) to [run tests with coverage](https://www.jetbrains.com/help/phpstorm/2016.1/running-with-coverage.html).
+When doing local tests I use [Laravel Homestead](https://github.com/laravel/homestead) `vagrant box add laravel/homestead`. Then from the project directory like `~/Code/project` I run a few command on the VM to download and install WordPress. Finally I use [PHPStorm](https://www.jetbrains.com/phpstorm/) to [run tests with coverage](https://www.jetbrains.com/help/phpstorm/2016.1/running-with-coverage.html).
 
 ![PHP Storm Example](https://s3-us-west-2.amazonaws.com/kevindees-github-readme/example-tests.png)
 
@@ -78,7 +78,7 @@ if( isset($_SERVER['SERVER_NAME']) ) {
 }
 ```
 
-If you are running tests from the guest machine, Homestead, you do not need to do this.
+If you are running tests on the guest machine, Homestead, you do not need to do this.
 
 # Circle CI
-If you need help with Circle CI this is a greate resource http://blog.wppusher.com/continuous-integration-with-wordpress-and-circleci/
+If you need help with Circle CI this is a great resource http://blog.wppusher.com/continuous-integration-with-wordpress-and-circleci/
