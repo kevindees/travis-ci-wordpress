@@ -2,7 +2,8 @@
 
 [Travis CI](https://travis-ci.org/) WordPress configuration and setup for PHP 5.6 and 5.5 for composer and PHP Unit tests. Read more about [Continuous Integration from Martin Fowler](http://martinfowler.com/articles/continuousIntegration.html). 
 
-- With this setup, WordPress is fully loaded before tests are run. 
+- With this setup, WordPress is fully loaded before tests are run.
+- Disable `wp_mail` to prevent tests from failing
 - Any WordPress hooks will not be implemented - like `add_action` and `add_filter`. You can configure it to be otherwise but for my needs, I have not (no instructions for this).
 - This configuration is only setup for [composer](https://getcomposer.org/) package projects ([using composer](https://getcomposer.org/doc/01-basic-usage.md)). Edit the `composer.json` to your specification and needs.
 
