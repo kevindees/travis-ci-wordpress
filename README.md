@@ -41,8 +41,8 @@ Download and install WordPress with `wp-cli.phar`:
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 chmod +x wp-cli.phar
 ./wp-cli.phar core download --allow-root --path=wordpress
-./wp-cli.phar core config --allow-root --dbname=wordpress --dbuser=travis --dbhost=127.0.0.1 --path=wordpress
-./wp-cli.phar core install --allow-root --admin_name=admin --admin_password=admin --admin_email=admin@example.com --url=http://127.0.0.1 --title=WordPress --path=wordpress
+./wp-cli.phar core config --allow-root --dbname=wordpress --dbuser=homestead --dbpass=secret --dbhost=127.0.0.1 --path=wordpress
+./wp-cli.phar core install --allow-root --admin_name=admin --admin_password=admin --admin_email=admin@example.com --url=http://tests.wp --title=WordPress --path=wordpress
 ```
 
 ### Configure Homestead
@@ -72,10 +72,10 @@ If you are running tests form the host computer then be sure to edit the `wp-con
 
 ```php
 /** MySQL hostname */
-if( isset($_SERVER['SERVER_NAME']) ) {
-    define('DB_HOST', '127.0.0.1');
+if( php_sapi_name() !== 'cli' || gethostname() == 'homestead' ) {
+    define('DB_HOST', 'localhost');
 } else {
-    define('DB_HOST', '127.0.0.1:33060'); // Default port forwarded by Homestead
+    define('DB_HOST', '127.0.0.1:33060');
 }
 ```
 
